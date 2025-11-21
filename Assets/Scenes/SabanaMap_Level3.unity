@@ -2559,7 +2559,7 @@ Transform:
   m_GameObject: {fileID: 435275530}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 5.5, z: 27.2}
+  m_LocalPosition: {x: -0.8, y: 5.5, z: 62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4278,7 +4278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Viento: 10.0 km/h'
+  m_text: 'Viento: 40.0 km/h'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4446,7 +4446,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Balas: 15'
+  m_text: 'Balas: 5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10090,7 +10090,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1477773226
 Transform:
   m_ObjectHideFlags: 0
@@ -10387,7 +10387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 03:00
+  m_text: 01:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11642,9 +11642,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1753834202309350067, guid: 3bf5061d29072084e9ed8fed234194a5, type: 3}
       propertyPath: m_Text
-      value: "Bienvenido al Nivel 1 \nEn este nivel contar\xE1s con 15 balas y la
-        \ndiana estar\xE1 a una distancia de 15 \nmetros.\nTendr\xE1s un tiempo l\xEDmite
-        de 3 minutos,\ncon una velocidad de viento\nde 10 km/h."
+      value: "Bienvenido al Nivel 3\nEn este nivel contar\xE1s con 5 balas y la \ndiana
+        estar\xE1 a una distancia de 50\nmetros.\nTendr\xE1s un tiempo l\xEDmite
+        de 1 minuto,\ncon una velocidad de viento\nde 40 km/h."
       objectReference: {fileID: 0}
     - target: {fileID: 4998088946481036704, guid: 3bf5061d29072084e9ed8fed234194a5, type: 3}
       propertyPath: m_Name
@@ -11677,11 +11677,11 @@ PrefabInstance:
     - target: {fileID: 8159608447910265684, guid: 3bf5061d29072084e9ed8fed234194a5, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 5497a1a2599398047ab60e4a10b70a97, type: 3}
+      objectReference: {fileID: 8300000, guid: 6ddccbd8685f4a64182a7590f7ce943f, type: 3}
     - target: {fileID: 8159608447910265684, guid: 3bf5061d29072084e9ed8fed234194a5, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5497a1a2599398047ab60e4a10b70a97, type: 3}
+      objectReference: {fileID: 8300000, guid: 6ddccbd8685f4a64182a7590f7ce943f, type: 3}
     - target: {fileID: 8485683337917864261, guid: 3bf5061d29072084e9ed8fed234194a5, type: 3}
       propertyPath: m_Text
       value: Mapa de la Sabana
@@ -12080,7 +12080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 03:00
+  m_text: 01:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12186,7 +12186,7 @@ Transform:
   m_GameObject: {fileID: 1807394583}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.8, y: 5.5, z: 30}
+  m_LocalPosition: {x: -0.8, y: 5.5, z: 65}
   m_LocalScale: {x: 1, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12359,11 +12359,11 @@ PrefabInstance:
     - target: {fileID: 175590287617111202, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 6423b7a372fb9dd40be2057a2f250921, type: 3}
+      objectReference: {fileID: 8300000, guid: b10c51aeed94a1646aa2a614655c04e5, type: 3}
     - target: {fileID: 175590287617111202, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6423b7a372fb9dd40be2057a2f250921, type: 3}
+      objectReference: {fileID: 8300000, guid: b10c51aeed94a1646aa2a614655c04e5, type: 3}
     - target: {fileID: 325826913497059810, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: m_Name
       value: WindManager
@@ -12382,7 +12382,7 @@ PrefabInstance:
       objectReference: {fileID: 1875763468}
     - target: {fileID: 937390828563302846, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: windStrength
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 937390828563302846, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: windStrengthText
@@ -14086,7 +14086,7 @@ PrefabInstance:
       objectReference: {fileID: 488620372}
     - target: {fileID: 6336796709014126691, guid: e2eebef2fb286a24792d9ba43633d74e, type: 3}
       propertyPath: maxShots
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6336796709014126691, guid: e2eebef2fb286a24792d9ba43633d74e, type: 3}
       propertyPath: timeText
@@ -14102,7 +14102,7 @@ PrefabInstance:
       objectReference: {fileID: 630348073}
     - target: {fileID: 6336796709014126691, guid: e2eebef2fb286a24792d9ba43633d74e, type: 3}
       propertyPath: timeLimit
-      value: 180
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6336796709014126691, guid: e2eebef2fb286a24792d9ba43633d74e, type: 3}
       propertyPath: timeText1
@@ -14378,7 +14378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Viento: 10.0 km/h'
+  m_text: 'Viento: 40.0 km/h'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14515,7 +14515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Balas: 15'
+  m_text: 'Balas: 5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
