@@ -24,23 +24,29 @@ EditorBuildSettings:
     path: Assets/Scenes/DesertMap_Level3.unity
     guid: 4e312c5b91fc2fe498273f3ff551a01e
   - enabled: 1
+    path: Assets/Scenes/ScoreScene.unity
+    guid: c1e6a876ab9b03f43bcf30a1402c5813
+  - enabled: 1
     path: Assets/Scenes/SabanaMap_Level1.unity
     guid: 8ea8c015a24512049ae4e22c0d480e9e
+  - enabled: 1
+    path: Assets/Scenes/SabanaMap_Level2.unity
+    guid: b21575a1b9c4d8b46bea69f39c3dba5e
+  - enabled: 1
+    path: Assets/Scenes/SabanaMap_Level3.unity
+    guid: 3964ad5f7115e9a4b83ad1878ea85e36
+  - enabled: 1
+    path: Assets/Scenes/RankingScene.unity
+    guid: 213700a3d4bac47468a3b9a826692f89
   - enabled: 1
     path: Assets/Scenes/StadiumMap_Level1.unity
     guid: 621c32a752be287439d08f023e9b763e
   - enabled: 1
     path: Assets/Scenes/StadiumMap_Level2.unity
-    guid: 14d8cd7a53fab0a49b1bff27302e0da8
+    guid: dbf82f85f4c38cb49ba850c83f65c015
   - enabled: 1
     path: Assets/Scenes/StadiumMap_Level3.unity
-    guid: 7cd8da4b410af2e48808872b0eb12a84
-  - enabled: 1
-    path: Assets/Scenes/ScoreScene.unity
-    guid: c1e6a876ab9b03f43bcf30a1402c5813
-  - enabled: 1
-    path: Assets/Scenes/RankingScene.unity
-    guid: 213700a3d4bac47468a3b9a826692f89
+    guid: e7cd4284a84c93e40bc5bcc5e3963fe6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9f7e1e7560fdd3948b9546163ba15aea, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

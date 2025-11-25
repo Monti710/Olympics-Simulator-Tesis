@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 3983898197260155638}
   - component: {fileID: 3992621905836925706}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: Icon Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 544653345314524808}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioControllerInstruccions, Assembly-CSharp
         m_MethodName: ReplaySound
         m_Mode: 1
@@ -1345,6 +1345,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &3945172616201097812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459206701819353016}
+  - component: {fileID: 4796663507419432831}
+  - component: {fileID: 3423479244460552291}
+  m_Layer: 5
+  m_Name: Icon Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &459206701819353016
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945172616201097812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 842927295217942822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4796663507419432831
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945172616201097812}
+  m_CullTransparentMesh: 1
+--- !u!114 &3423479244460552291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945172616201097812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7832486d350096542aefd38da1c44ec5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4265303545921997339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,8 +1812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9125751297078353754}
-  - component: {fileID: 544653345314524808}
-  - component: {fileID: 9046072225995795922}
+  - component: {fileID: 2779148381378236730}
   - component: {fileID: 8159608447910265684}
   m_Layer: 0
   m_Name: Menu_Intro
@@ -1764,7 +1838,7 @@ Transform:
   - {fileID: 6385647666913196104}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &544653345314524808
+--- !u!114 &2779148381378236730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1773,40 +1847,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4998088946481036704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab686c9ce50eeeb48b516d9c4a80ccc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d403f7e34b3e224fa7b8b00739ec27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8159608447910265684}
-  slider: {fileID: 0}
-  tiempoTexto: {fileID: 0}
---- !u!114 &9046072225995795922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4998088946481036704}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f18f40f12d9e34aaf49bd6fe255648, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 8159608447910265684}
-  subtitleText: {fileID: 8665523435527858630}
-  fadeDuration: 1
-  typingSpeed: 0.05
-  delayBetweenChunks: 1.3
-  distanceFromCamera: 2
-  heightOffset: -0.2
-  subtitleChunks:
-  - Bienvenido al Nivel 1.
-  - En este nivel contaras con 15 balas y
-  - 'la  diana estara a una distancia de 15 '
-  - metros.
-  - 
-  - Tendras un tiempo limite de 3 minutos,
-  - con una velocidad de viento
-  - de 100 km/h.
+  pauseResumeButton: {fileID: 5701611723459113492}
+  restartButton: {fileID: 6760199599131571393}
+  pauseIconObject: {fileID: 2462081576538766113}
+  playIconObject: {fileID: 3945172616201097812}
 --- !u!82 &8159608447910265684
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2579,6 +2627,7 @@ RectTransform:
   m_Children:
   - {fileID: 3077285302352695434}
   - {fileID: 5363530936921700328}
+  - {fileID: 459206701819353016}
   m_Father: {fileID: 8069162312957679117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2638,7 +2687,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 544653345314524808}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioControllerInstruccions, Assembly-CSharp
         m_MethodName: PauseSound
         m_Mode: 1

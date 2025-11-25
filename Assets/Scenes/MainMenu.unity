@@ -771,7 +771,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -833,13 +833,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352792217}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &352792220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3358,7 +3358,9 @@ PrefabInstance:
       value: Stadium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2881392913908561385, guid: 8b04e09650243c443ab07683c9d0bd91, type: 3}
+    - {fileID: 7896252401133003217, guid: 8b04e09650243c443ab07683c9d0bd91, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b04e09650243c443ab07683c9d0bd91, type: 3}
@@ -3873,6 +3875,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 875398153}
+    - target: {fileID: 1915472228799388057, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
+      propertyPath: mensajeParaEscribir1
+      value: En el nivel de dificultad dificil, podremos observar que la diana esta
+        a una distancia de 50 metros del usuario, ademas de contar con una velocidad
+        de viento de 40 km/h con una cantidad de 5 disparos.
+      objectReference: {fileID: 0}
     - target: {fileID: 2407032713653383894, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
       propertyPath: m_Name
       value: Menu_Difficulty
@@ -3880,6 +3888,12 @@ PrefabInstance:
     - target: {fileID: 2407032713653383894, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948989339095874018, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
+      propertyPath: mensajeParaEscribir1
+      value: En el nivel de dificultad facil, podremos observar que la diana esta
+        a una distancia de 15 metros del usuario, ademas de contar con una velocidad
+        de viento de 10 km/h con una cantidad de 15 disparos.
       objectReference: {fileID: 0}
     - target: {fileID: 5928599539313195020, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3924,6 +3938,12 @@ PrefabInstance:
     - target: {fileID: 6652678236674681461, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
       propertyPath: m_Text
       value: "Dif\xEDcil"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214838774249277441, guid: 362faa9f345b99b409e4a16959e8be3b, type: 3}
+      propertyPath: mensajeParaEscribir1
+      value: En el nivel de dificultad medio, podremos observar que la diana esta
+        a una distancia de 25 metros del usuario, ademas de contar con una velocidad
+        de viento de 25 km/h con una cantidad de 10 disparos.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4074,6 +4094,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7392722812635821367, guid: 34b935ce88059014a94dc646b078956f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7392722812635821367, guid: 34b935ce88059014a94dc646b078956f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8417810095582733637, guid: 34b935ce88059014a94dc646b078956f, type: 3}
       propertyPath: m_Text
       value: "Simulador de Tiro Ol\xEDmpico\n"
@@ -4137,6 +4165,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4165167646574667040, guid: 7c7a6979b35901548925ce5d2595f494, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165167646574667040, guid: 7c7a6979b35901548925ce5d2595f494, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 875398153}
@@ -4144,6 +4176,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 875398153}
+    - target: {fileID: 7798063541581130573, guid: 7c7a6979b35901548925ce5d2595f494, type: 3}
+      propertyPath: nameScene
+      value: SabanaMap_
+      objectReference: {fileID: 0}
     - target: {fileID: 7817745049758794945, guid: 7c7a6979b35901548925ce5d2595f494, type: 3}
       propertyPath: m_Text
       value: "Atr\xE1s\n"
