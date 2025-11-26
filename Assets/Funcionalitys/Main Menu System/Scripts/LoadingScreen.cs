@@ -29,8 +29,8 @@ public class LoadingScreen : MonoBehaviour
         }
 
         // Llega al 90% y esperamos un segundo extra (opcional)
-        loadingBar.value = 1f;
-        yield return new WaitForSeconds(1f);
+        loadingBar.value = 2f;
+        yield return new WaitForSeconds(2f);
 
         // Activar la siguiente escena
         operation.allowSceneActivation = true;

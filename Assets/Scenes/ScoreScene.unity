@@ -2303,7 +2303,7 @@ MonoBehaviour:
   contentText: {fileID: 2070581828}
   scrollRect: {fileID: 406120916}
   finalScoreText: {fileID: 327543573}
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  highlightColor: {r: 0, g: 0.14901961, b: 1, a: 1}
 --- !u!1 &660071295
 GameObject:
   m_ObjectHideFlags: 0
