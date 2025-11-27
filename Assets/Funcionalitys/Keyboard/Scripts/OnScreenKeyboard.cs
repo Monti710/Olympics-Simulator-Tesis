@@ -17,14 +17,23 @@ namespace PrabdeepDhaliwal.OnScreenKeyboard
         public Button shiftButton;
         public Button capsLockButton;
         public Button enterButton;
-        public Button backspaceButton;
-        public Button deleteButton;
+        public Button backspaceButton; // Back
+        public Button deleteButton;    // Del
         public Button spaceButton;
         public Button leftArrowButton;
         public Button rightArrowButton;
 
         private bool isCapsLockOn = false;
         private bool isShiftPressed = false;
+
+        // NUEVO: estado interno del texto y del cursor
+        private string currentText = "";
+        private int caretIndex = 0;
+
+        // Caracter visual del “puntero” (línea)
+        [SerializeField] private string caretVisual = "|";
+        // Si quieres usar RichText (ej: colorear el cursor)
+        [SerializeField] private bool useRichTextCaret = false;
 
         void Start()
         {
@@ -33,6 +42,16 @@ namespace PrabdeepDhaliwal.OnScreenKeyboard
                 Debug.LogError("⚠️ No se ha asignado ningún TMP_InputField al teclado.");
                 return;
             }
+
+            // Opcional: desactivar el caret nativo para que no se vea
+            targetInputField.caretColor = new Color(0, 0, 0, 0);
+            // Opcional: para que el usuario no escriba con el teclado físico
+            // targetInputField.readOnly = true;
+
+            // Inicializar estado interno
+            currentText = targetInputField.text;
+            caretIndex = currentText.Length;
+            UpdateVisualText();
 
             // Configurar las teclas normales
             foreach (var key in keys)
@@ -44,8 +63,13 @@ namespace PrabdeepDhaliwal.OnScreenKeyboard
             // Configurar las teclas especiales
             capsLockButton?.onClick.AddListener(ToggleCapsLock);
             shiftButton?.onClick.AddListener(ToggleShift);
-            backspaceButton?.onClick.AddListener(DeleteCharacter);
-            deleteButton?.onClick.AddListener(DeleteCharacterAtCaret);
+
+            // BACK: borrar la última letra del texto
+            backspaceButton?.onClick.AddListener(DeleteLastCharacter);
+
+            // DEL: borrar TODO el contenido del input
+            deleteButton?.onClick.AddListener(ClearAllText);
+
             spaceButton?.onClick.AddListener(() => InsertCharacter(" "));
             enterButton?.onClick.AddListener(SubmitText);
             leftArrowButton?.onClick.AddListener(() => MoveCaret(-1));
@@ -54,7 +78,79 @@ namespace PrabdeepDhaliwal.OnScreenKeyboard
             UpdateKeyLabels();
         }
 
-        // --- Inserción de texto ---
+        // ============================
+        //    MANEJO DE TEXTO / CURSOR
+        // ============================
+
+        // Actualiza el texto visible en el TMP_InputField insertando el “puntero”
+        private void UpdateVisualText()
+        {
+            if (targetInputField == null) return;
+
+            if (currentText == null)
+                currentText = "";
+
+            // Aseguramos que el índice esté dentro de rango
+            caretIndex = Mathf.Clamp(caretIndex, 0, currentText.Length);
+
+            string visible = currentText;
+
+            if (useRichTextCaret)
+            {
+                // Ejemplo con color blanco (asegúrate de que Rich Text esté activo en el TMP_InputField)
+                visible = visible.Insert(caretIndex, "<color=#FFFFFFFF>" + caretVisual + "</color>");
+            }
+            else
+            {
+                visible = visible.Insert(caretIndex, caretVisual);
+            }
+
+            targetInputField.text = visible;
+        }
+
+        // Inserta texto en la posición del cursor
+        private void InsertCharacter(string character)
+        {
+            if (string.IsNullOrEmpty(character)) return;
+
+            caretIndex = Mathf.Clamp(caretIndex, 0, currentText.Length);
+            currentText = currentText.Insert(caretIndex, character);
+            caretIndex += character.Length;
+
+            UpdateVisualText();
+        }
+
+        // BACK: elimina la ÚLTIMA letra del texto (sin importar donde esté el cursor)
+        private void DeleteLastCharacter()
+        {
+            if (string.IsNullOrEmpty(currentText)) return;
+
+            currentText = currentText.Remove(currentText.Length - 1, 1);
+            // Después de borrar la última, colocamos el cursor al final
+            caretIndex = currentText.Length;
+
+            UpdateVisualText();
+        }
+
+        // DEL: elimina TODO el texto
+        private void ClearAllText()
+        {
+            currentText = "";
+            caretIndex = 0;
+            UpdateVisualText();
+        }
+
+        // Mover el cursor manualmente con las flechas
+        private void MoveCaret(int direction)
+        {
+            caretIndex = Mathf.Clamp(caretIndex + direction, 0, currentText.Length);
+            UpdateVisualText();
+        }
+
+        // ============================
+        //         TECLAS NORMALES
+        // ============================
+
         private void OnKeyPress(Key key)
         {
             if (targetInputField == null) return;
@@ -69,43 +165,14 @@ namespace PrabdeepDhaliwal.OnScreenKeyboard
             }
         }
 
-        private void InsertCharacter(string character)
-        {
-            if (string.IsNullOrEmpty(character)) return;
+        // ============================
+        //        TECLAS ESPECIALES
+        // ============================
 
-            int pos = targetInputField.caretPosition;
-            targetInputField.text = targetInputField.text.Insert(pos, character);
-            targetInputField.caretPosition = pos + character.Length;
-        }
-
-        private void DeleteCharacter()
-        {
-            if (string.IsNullOrEmpty(targetInputField.text) || targetInputField.caretPosition == 0) return;
-
-            int pos = targetInputField.caretPosition;
-            targetInputField.text = targetInputField.text.Remove(pos - 1, 1);
-            targetInputField.caretPosition = pos - 1;
-        }
-
-        private void DeleteCharacterAtCaret()
-        {
-            if (string.IsNullOrEmpty(targetInputField.text)) return;
-            int pos = targetInputField.caretPosition;
-            if (pos < targetInputField.text.Length)
-                targetInputField.text = targetInputField.text.Remove(pos, 1);
-        }
-
-        private void MoveCaret(int direction)
-        {
-            int newPos = Mathf.Clamp(targetInputField.caretPosition + direction, 0, targetInputField.text.Length);
-            targetInputField.caretPosition = newPos;
-        }
-
-        // --- Teclas especiales ---
         private void SubmitText()
         {
-            Debug.Log("Texto ingresado: " + targetInputField.text);
-            // Aquí puedes agregar tu lógica de envío o limpieza del campo si lo deseas
+            Debug.Log("Texto ingresado: " + currentText);
+            // Aquí puedes usar currentText directamente en lugar de targetInputField.text
         }
 
         private void ToggleCapsLock()
@@ -119,6 +186,10 @@ namespace PrabdeepDhaliwal.OnScreenKeyboard
             isShiftPressed = !isShiftPressed;
             UpdateKeyLabels();
         }
+
+        // ============================
+        //    MAYÚSCULAS / SHIFT
+        // ============================
 
         private string GetKeyText(Key key)
         {

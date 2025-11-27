@@ -10,6 +10,7 @@ public class ScoreboardLoader : MonoBehaviour
     public Text contentText;  // Donde se mostrarán los puntajes
     public ScrollRect scrollRect;  // Componente ScrollRect para el desplazamiento
     public Text headerText;  // Nuevo campo para el encabezado (mostrar mapa y nivel)
+    public TextMeshProUGUI headerTrophys;
 
     // Nuevos campos para mostrar los primeros 3 puntajes
     public TextMeshProUGUI top1Text;  // Para el top 1
@@ -36,6 +37,7 @@ public class ScoreboardLoader : MonoBehaviour
         if (scoreList == null || scoreList.scores == null || scoreList.scores.Count == 0)
         {
             headerText.text = "No se encontró la lista";  // Cambiar encabezado
+            headerTrophys.text = "No se encontró la lista";
             contentText.text = "No se encontró ningún dato.";  // Mensaje de error en el contenido
 
             // Mostrar "No disponible" en los top 1, top 2 y top 3
@@ -54,6 +56,7 @@ public class ScoreboardLoader : MonoBehaviour
         string mapDescription = GetMapDescription(mapName);
         string levelDescription = GetLevelDescription(level);
         headerText.text = $"{mapDescription}, {levelDescription}";  // Mostrar en la parte superior
+        headerTrophys.text = $"{mapDescription}, {levelDescription}";
 
         // Ordenar los puntajes en orden descendente
         var listaOrdenada = scoreList.scores.OrderByDescending(s => s.score).ToList();

@@ -374,7 +374,7 @@ MonoBehaviour:
     m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   projectilePrefab: {fileID: -330249933634065807, guid: d1254097a883eb044bb7ee5bb7407eee, type: 3}
   muzzle: {fileID: 4921221836713480801}
-  projectileSpeed: 40
+  projectileSpeed: 250
   fireCooldown: 0.15
   autoFireWhileHeld: 0
   pressThreshold: 0.5
@@ -2700,7 +2700,7 @@ MonoBehaviour:
     m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   projectilePrefab: {fileID: -330249933634065807, guid: d1254097a883eb044bb7ee5bb7407eee, type: 3}
   muzzle: {fileID: 3523364279837195208}
-  projectileSpeed: 40
+  projectileSpeed: 250
   fireCooldown: 0.15
   autoFireWhileHeld: 0
   pressThreshold: 0.5

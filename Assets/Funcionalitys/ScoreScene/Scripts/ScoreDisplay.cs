@@ -35,6 +35,12 @@ public class ScoreDisplay : MonoBehaviour
     {
         string playerName = nameInput.text.Trim();
 
+        if (!string.IsNullOrEmpty(playerName) && playerName.EndsWith("|"))
+        {
+            // Remueve el último carácter (la 'l')
+            playerName = playerName.Substring(0, playerName.Length - 1);
+        }
+
         // Si el campo está vacío, mostrar advertencia y salir del método
         if (string.IsNullOrEmpty(playerName))
         {
@@ -59,40 +65,23 @@ public class ScoreDisplay : MonoBehaviour
     {
         // Crear el nombre del archivo correspondiente
         string path = GetPathForLevel(levelScene);
-        ScoreList list = LocalScoreManager.LoadScores(path);
 
-        // Si no hay puntajes guardados, crear el primero
-        if (list == null || list.scores.Count == 0)
-        {
-            ScoreData newScore = new ScoreData
-            {
-                playerName = playerName,
-                score = finalScore,
-                date = DateTime.Now.ToString("yyyy-MM-dd HH:mm")
-            };
-            LocalScoreManager.SaveScore(newScore, path);
-        }
-        else
-        {
-            // Buscar si ya existe un puntaje igual al actual
-            ScoreData existing = list.scores.Find(s => s.score == finalScore);
+        // **MODIFICACIÓN CLAVE:**
+        // Se elimina la lógica de LoadScores y la búsqueda de duplicados.
+        // Ahora, siempre se crea un nuevo objeto ScoreData con los datos actuales.
 
-            if (existing != null)
-            {
-                existing.playerName = playerName;
-                LocalScoreManager.OverwriteScores(list, path);
-            }
-            else
-            {
-                ScoreData newScore = new ScoreData
-                {
-                    playerName = playerName,
-                    score = finalScore,
-                    date = DateTime.Now.ToString("yyyy-MM-dd HH:mm")
-                };
-                LocalScoreManager.SaveScore(newScore, path);
-            }
-        }
+        ScoreData newScore = new ScoreData
+        {
+            playerName = playerName,
+            score = finalScore,
+            // Como el tiempo será diferente, este nuevo registro siempre será único.
+            date = DateTime.Now.ToString("yyyy-MM-dd HH:mm")
+        };
+
+        // Se llama a SaveScore. Se asume que este método en LocalScoreManager 
+        // maneja la carga de la lista existente, la adición del nuevo registro 
+        // (newScore) y el guardado de la lista completa.
+        LocalScoreManager.SaveScore(newScore, path);
     }
 
     private string GetPathForLevel(string levelScene)

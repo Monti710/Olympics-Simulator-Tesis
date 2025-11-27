@@ -4637,6 +4637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig) Modified
       objectReference: {fileID: 0}
+    - target: {fileID: 9109601089565655572, guid: 38f4d7a60002c7b4195d161af7817b36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4002325159577909304, guid: 38f4d7a60002c7b4195d161af7817b36, type: 3}
     - {fileID: 6077838198970949558, guid: 38f4d7a60002c7b4195d161af7817b36, type: 3}

@@ -4710,7 +4710,7 @@ PrefabInstance:
       objectReference: {fileID: 668434661}
     - target: {fileID: 937390828563302846, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: windStrength
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 937390828563302846, guid: c038a8299c56a034eb9f202ee20d2bff, type: 3}
       propertyPath: windStrengthText

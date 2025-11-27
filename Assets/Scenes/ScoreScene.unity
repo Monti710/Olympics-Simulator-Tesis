@@ -2304,6 +2304,17 @@ MonoBehaviour:
   scrollRect: {fileID: 406120916}
   finalScoreText: {fileID: 327543573}
   highlightColor: {r: 0, g: 0.14901961, b: 1, a: 1}
+--- !u!114 &619084327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8790197008143627557, guid: 1dd0dcdfda523bf48b59ee3f8c3d1510, type: 3}
+  m_PrefabInstance: {fileID: 1276233124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &660071295
 GameObject:
   m_ObjectHideFlags: 0
@@ -5050,6 +5061,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3354677011829234077, guid: 1dd0dcdfda523bf48b59ee3f8c3d1510, type: 3}
+      propertyPath: caretVisual
+      value: '|'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354677011829234077, guid: 1dd0dcdfda523bf48b59ee3f8c3d1510, type: 3}
+      propertyPath: backspaceButton
+      value: 
+      objectReference: {fileID: 619084327}
+    - target: {fileID: 3354677011829234077, guid: 1dd0dcdfda523bf48b59ee3f8c3d1510, type: 3}
       propertyPath: keys.Array.size
       value: 36
       objectReference: {fileID: 0}
@@ -5057,6 +5076,10 @@ PrefabInstance:
       propertyPath: targetInputField
       value: 
       objectReference: {fileID: 764891590}
+    - target: {fileID: 3354677011829234077, guid: 1dd0dcdfda523bf48b59ee3f8c3d1510, type: 3}
+      propertyPath: useRichTextCaret
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3354677011829234077, guid: 1dd0dcdfda523bf48b59ee3f8c3d1510, type: 3}
       propertyPath: 'keys.Array.data[0]'
       value: 
